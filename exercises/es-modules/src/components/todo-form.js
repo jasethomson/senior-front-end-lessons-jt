@@ -1,6 +1,6 @@
-const { createElement } = require('../lib');
+import { createElement } from '../lib';
 
-class TodoForm {
+export default class TodoForm {
   constructor(onSubmit) {
     this.newTask = '';
     this.element = null;
@@ -45,4 +45,4 @@ class TodoForm {
   }
 }
 
-module.exports = TodoForm;
+// export default TodoForm;

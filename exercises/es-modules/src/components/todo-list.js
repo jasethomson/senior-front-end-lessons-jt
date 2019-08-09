@@ -1,6 +1,6 @@
-const { createElement } = require('../lib');
+import { createElement } from '../lib';
 
-class TodoList {
+export default class TodoList {
   constructor(onToggle) {
     this.onToggle = onToggle;
     this.handleChange = this.handleChange.bind(this);
@@ -45,4 +45,4 @@ class TodoList {
   }
 }
 
-module.exports = TodoList;
+// export default TodoList;

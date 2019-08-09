@@ -1,6 +1,6 @@
-const toArray = require('./to-array');
+import toArray from './to-array';
 
-function createElement(tagName, attributes, children = []) {
+export default function createElement(tagName, attributes, children = []) {
   const parent = document.createElement(tagName);
   for (const name in attributes) {
     parent.setAttribute(name, attributes[name]);
@@ -14,4 +14,4 @@ function createElement(tagName, attributes, children = []) {
   return parent;
 }
 
-module.exports = createElement;
+// export default createElement;
