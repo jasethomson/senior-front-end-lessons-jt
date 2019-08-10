@@ -45,5 +45,3 @@ export default class TodoApp {
     this.onUpdate(this.todos);
   }
 }
-
-// export default TodoApp;

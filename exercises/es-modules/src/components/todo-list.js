@@ -44,5 +44,3 @@ export default class TodoList {
     return todoList;
   }
 }
-
-// export default TodoList;

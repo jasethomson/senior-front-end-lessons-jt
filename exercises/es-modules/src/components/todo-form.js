@@ -44,5 +44,3 @@ export default class TodoForm {
     return this.element;
   }
 }
-
-// export default TodoForm;
