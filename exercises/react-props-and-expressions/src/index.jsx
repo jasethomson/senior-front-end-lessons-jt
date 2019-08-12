@@ -16,8 +16,3 @@ ReactDOM.render(
   element,
   document.querySelector('#root')
 );
-
-// ReactDOM.render(
-//   <CustomButton />,
-//   document.getElementById('root')
-// );
