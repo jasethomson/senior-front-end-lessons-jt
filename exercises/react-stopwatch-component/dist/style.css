@@ -1,0 +1,20 @@
+.container{
+  display: flex;
+  justify-content: center;
+}
+.bigC {
+  border: 5px solid black;
+  height: 20vh;
+  width: 20vh;
+  border-radius: 50%;
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+}
+#playButton,
+#pauseButton{
+  position: relative;
+  transform: scale(4,4);
+  top: 200px;
+  right: 85px;
+}
