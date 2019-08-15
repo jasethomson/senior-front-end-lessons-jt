@@ -6,5 +6,5 @@ chance.then(function (value) {
   console.log(value);
 });
 chance.catch(function (value) {
-  console.log(value);
+  console.log(value.message);
 });
