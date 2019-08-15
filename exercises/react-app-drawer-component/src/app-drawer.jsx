@@ -6,65 +6,49 @@ class AppDrawer extends React.Component {
     this.state = {
       clicked: false
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleHamburgerClick = this.handleHamburgerClick.bind(this);
+    this.handleMenuClick = this.handleMenuClick.bind(this);
   }
 
-  handleClick() {
-
-    if (this.state.clicked) {
-      this.popBack();
-      // this.popOutMenu =
-      //   < div className = "sideMenu" >
-      //     <div className="menu">Menu</div>
-      //     <div className="about">About</div>
-      //     <div className="getStarted">Get Started</div>
-      //     <div className="signIn">Sign In</div>
-      //   </div >;
-
-    } else {
-      this.popOut();
-    }
+  handleHamburgerClick() {
+    this.popOut();
+  }
+  handleMenuClick() {
+    this.popBack();
   }
   popOut() {
-    document.querySelector('.sideMenu').style.width = '250px';
+    // document.querySelector('body').style['background-color'] = 'grey';
     this.setState({
       clicked: true
     });
-
   }
   popBack() {
-    document.querySelector('.sideMenu').style.width = '0px';
+    // document.querySelector('body').style['background-color'] = 'white';
     this.setState({
       clicked: false
-
     });
   }
   menuSymbol() {
-    if (this.state.clicked) {
-      return '';
+    if (!this.state.clicked) {
+      return <i onClick={this.handleHamburgerClick} className="fas fa-bars"></i>;
     } else {
-      return <i onClick={this.handleClick} className="fas fa-bars"></i>;
+      return (
+        <div className="container">
+          < div className="sideMenu" >
+            <div className="menu">Menu</div>
+            <div onClick={this.handleMenuClick} className="about">About</div>
+            <div onClick={this.handleMenuClick} className="getStarted">Get Started</div>
+            <div onClick={this.handleMenuClick} className="signIn">Sign In</div>
+          </div >
+          <div className="restOfScreen"></div>
+        </div>
+      );
     }
   }
-  // menu() {
-  //   if(this.state.clicked){
-
-  //     }
-  //   } else {
-  //     return "";
-  //   }
-  // }
   render() {
-
     return (
       <div>
         {this.menuSymbol()}
-        <div className="sideMenu">
-          <div className="menu">Menu</div>
-          <div className="about">About</div>
-          <div className="getStarted">Get Started</div>
-          <div className="signIn">Sign In</div>
-        </div >
       </div>
     );
   }
