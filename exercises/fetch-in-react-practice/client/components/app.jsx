@@ -49,25 +49,31 @@ class App extends React.Component {
      */
   }
   toggleCompleted(todoId) {
-    // const targetObjectId = this.state.todos.find(element => element.id === todoId);
+    const targetObject = this.state.todos.find(element => element.id === todoId);
+    let completedObject;
+    if (targetObject.isCompleted === true) {
+      completedObject = { isCompleted: false };
+    } else {
+      completedObject = { isCompleted: true };
+    }
     fetch(`/api/todos/${todoId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
-      }
+      },
+      body: JSON.stringify(completedObject)
     })
       .then(response => response.json())
       .then(changeTodo => {
-        if (changeTodo.isCompleted === true) {
-          changeTodo.isCompleted = false;
-        } else {
-          changeTodo.isCompleted = true;
-        }
-
+        const todosList = this.state.todos.map(todo => {
+          if (changeTodo.id === todo.id) {
+            return changeTodo;
+          } else {
+            return todo;
+          }
+        });
+        this.setState({ todos: todosList });
       });
-
-    // .then(changeTodo => this.setState({ todos: changeTodo }));
-
     /**
      * Use fetch to send a PATCH request to `/api/todos/${todoId}`
      * Then 😉, once the JSON is received and parsed,
