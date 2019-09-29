@@ -1,0 +1,12 @@
+.pw{
+  font-weight: bold;
+}
+.statement{
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+}
+.fas {
+  position: relative;
+  left: 10px;
+}
