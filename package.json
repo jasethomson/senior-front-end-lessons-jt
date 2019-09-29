@@ -109,5 +109,8 @@
         }
       }
     ]
+  },
+  "dependencies": {
+    "react-dom": "16.9.0"
   }
 }
