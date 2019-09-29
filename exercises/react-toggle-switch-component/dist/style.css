@@ -1,0 +1,25 @@
+
+.grayTime,
+.moneyTime {
+  width: 8vmin;
+  height: 2.5vmin;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+.grayTime {
+  background-color: gray;
+}
+.moneyTime {
+  background-color: green;
+}
+.circle {
+  background-color: lightblue;
+  width: 4vmin;
+  height: 2.5vmin;
+  border-radius: 50px;
+  position: relative;
+  border: 1px solid black;
+}
+.clicked {
+  left: 40px;
+}
