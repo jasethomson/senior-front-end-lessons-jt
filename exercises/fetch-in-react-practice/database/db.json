@@ -3,17 +3,27 @@
     {
       "id": 1,
       "task": "Learn to code.",
-      "isCompleted": true
+      "isCompleted": false
     },
     {
       "id": 2,
       "task": "Build projects.",
-      "isCompleted": true
+      "isCompleted": false
     },
     {
       "id": 3,
       "task": "Get a job.",
-      "isCompleted": true
+      "isCompleted": false
+    },
+    {
+      "task": "working towards SGT ",
+      "isCompleted": false,
+      "id": 4
+    },
+    {
+      "task": "it works",
+      "isCompleted": false,
+      "id": 5
     }
   ]
 }
