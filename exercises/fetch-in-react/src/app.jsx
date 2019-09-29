@@ -4,13 +4,17 @@ import UserList from './user-list';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.users = [];
     this.state = {
       users: [],
       isLoading: true
     };
+
   }
   componentDidMount() {
-    /* your code here */
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then(users => this.setState({ users, isLoading: false }));
   }
   render() {
     return this.state.isLoading
